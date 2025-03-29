@@ -1,0 +1,31 @@
+employee_id,first_name,last_name,email,phone,job_title,hire_date,salary,manager_id
+1,Dean,Bell,dean.bell@dealership.com,4024737470,Technician,2024-09-09,72913.45,16
+2,Rebecca,Merritt,rebecca.merritt@dealership.com,3366730095,Technician,2017-07-02,48947.56,3
+3,Robert,Lopez,robert.lopez@dealership.com,4248552750,Manager,2017-05-25,52599.78,
+4,Toni,Smith,toni.smith@dealership.com,4057051459,Sales Associate,2019-10-28,83193.48,18
+5,Adrian,Keith,adrian.keith@dealership.com,2140888731,Receptionist,2016-04-12,79092.16,
+6,Nathan,Bryant,nathan.bryant@dealership.com,8863790499,Sales Associate,2016-09-24,68913.28,26
+7,Christopher,Nichols,christopher.nichols@dealership.com,5279136228,Manager,2018-08-10,85556.23,
+8,Patricia,Williams,patricia.williams@dealership.com,2804453699,Technician,2021-02-04,49532.36,16
+9,Stephen,Silva,stephen.silva@dealership.com,9144199148,Manager,2019-04-02,43444.79,
+10,Rebecca,Collins,rebecca.collins@dealership.com,8055029201,Receptionist,2016-07-30,30925.26,
+11,Eric,Davis,eric.davis@dealership.com,9854868138,Technician,2018-04-17,38444.84,26
+12,Troy,Walker,troy.walker@dealership.com,5016100582,Receptionist,2021-01-28,31785.87,
+13,Jake,Bradford,jake.bradford@dealership.com,1607577596,Sales Associate,2015-04-17,41097.48,7
+14,Debra,Lee,debra.lee@dealership.com,4711932202,Sales Associate,2017-08-12,48525.48,7
+15,Teresa,Taylor,teresa.taylor@dealership.com,7909144174,Technician,2024-02-01,42051.92,3
+16,Brett,Peck,brett.peck@dealership.com,1109196359,Manager,2019-03-18,41667.59,
+17,Vanessa,Hale,vanessa.hale@dealership.com,3130225419,Technician,2023-11-22,52830.82,7
+18,Matthew,Kirk,matthew.kirk@dealership.com,6505965184,Manager,2018-01-22,35519.11,
+19,Victor,Hinton,victor.hinton@dealership.com,4697424965,Receptionist,2021-12-23,65336.64,
+20,Michael,Whitney,michael.whitney@dealership.com,8296549158,Finance Officer,2021-07-20,81348.02,
+21,Dana,Keller,dana.keller@dealership.com,7351837961,Receptionist,2015-09-15,71133.85,
+22,Laura,Williams,laura.williams@dealership.com,2667133548,Sales Associate,2021-06-11,88563.11,9
+23,Kevin,Wall,kevin.wall@dealership.com,2639060963,Finance Officer,2020-05-24,84579.42,
+24,Ashley,Peterson,ashley.peterson@dealership.com,7337299481,Technician,2022-01-24,70830.88,26
+25,Robert,Sims,robert.sims@dealership.com,2013201795,Sales Associate,2021-07-10,74820.8,9
+26,Joshua,Figueroa,joshua.figueroa@dealership.com,2057844447,Manager,2015-06-06,60642.27,
+27,Patricia,Huffman,patricia.huffman@dealership.com,7779129610,Sales Associate,2022-03-18,45580.02,16
+28,Daniel,Kelley,daniel.kelley@dealership.com,5650681178,Receptionist,2016-11-24,50554.13,
+29,Robert,Holt,robert.holt@dealership.com,2050208292,Sales Associate,2018-06-20,73721.79,7
+30,Zachary,Mitchell,zachary.mitchell@dealership.com,1571084699,Sales Associate,2017-05-29,81391.42,9
