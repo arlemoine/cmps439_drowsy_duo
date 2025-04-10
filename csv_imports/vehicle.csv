@@ -1,4 +1,4 @@
-vehicle_id,make,model,year,vin,date_arrive,date_depart,mileage,num_owners,list_price
+vehicle_id,v_make,v_model,v_year,vin,date_arrive,date_depart,mileage,num_owners,list_price
 1,Ford,Mustang,2018,567B547F-349A-464,2024-03-22,,34067,3,12095.71
 2,Chevrolet,Silverado,2015,C7F20FCA-E074-443,2025-02-04,2023-06-10,145335,3,42823.66
 3,Ford,Mustang,2024,74966D7F-DF37-4BD,2024-12-06,2023-09-14,86687,3,14438.79
