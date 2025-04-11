@@ -38,6 +38,7 @@ VALUES (
     4500.00
 );
 
+
 --QM3: UPDATE DATA:
 ----Description: Update customer last_contact date after sending them a personalized email
 
@@ -53,6 +54,7 @@ DELETE
 FROM vehicle
 WHERE vehicle_id = 17;
 
+
 --QM5: QUERY DATA WITH WHERE CLAUSE:
 ----Description: Identify highly attractive vehicles to be advertised to bring in opportunity to record more vehicle sales.
 
@@ -65,38 +67,73 @@ WHERE (v_year > 2023) OR
 
 
 --QM6.1: QUERY DATA WITH 'SUB-QUERY IN WHERE CLAUSE':
-----Description: .....................
+----Description: Identify customers who have yet to buy a vehicle in order to pursue a sale
 
-SELECT ....
-FROM ...
-WHERE ..... (SELECT .... FROM ..... WHERE .....)
+SELECT customer_id, first_name, last_name, email
+FROM customer
+WHERE customer_id NOT IN (
+    SELECT customer_id
+    FROM sale
+);
+
 
 --QM6.2: QUERY DATA WITH SUB-QUERY IN FROM CLAUSE:
-----Description: .....................
+----Description: Determine which parts need to be replenished in storage location D
 
-SELECT ....
-FROM (SELECT .... FROM ..... WHERE ......) AS <TABLE-NAME> ....
-WHERE ...... <TABLE-NAME> ......
-
+SELECT d.part_id, d.description, d.qty_current, d.qty_min
+FROM (
+	SELECT part_id, description, qty_current, qty_min
+	FROM part
+	WHERE storage_loc = 'D'
+) AS d
+WHERE d.qty_current <= d.qty_min;
 
 
 --QM6.3: QUERY DATA WITH 'SUB-QUERY IN SELECT CLAUSE':
-----Description: .....................
+----Description: Determine each customer's last service date to know when they should be sent an email reminder of future service
 
-SELECT .... (SELECT .... FROM ... TBI ... WHERE .... TBO.** = TBI.** ... )
-FROM ...TBO ...
-WHERE ......
+SELECT customer_id,first_name, last_name, email,(
+	SELECT MAX(service_date)
+	FROM service AS s
+	WHERE s.customer_id = c.customer_id
+) AS last_service_date
+FROM customer AS c
+WHERE email IS NOT NULL;
 
 
 --QM7: QUERY DATA WITH EXCEPT:
-----Description: .....................
+----Description: Identify customers who have not yet made a purchase in order to record more sales
+
+SELECT customer_id
+FROM customer
+EXCEPT 
+	SELECT customer_id
+	FROM sale;
 
 
 --QM8.1: QUERY DATA WITH ANY/SOME:
-----Description: .....................
+----Description: Ensure that all recorded sales have an assigned sales associate as opposed to other employees
+
+SELECT employee_id, first_name, last_name, job_title
+FROM employee
+WHERE employee_id = ANY (
+	SELECT employee_id
+	FROM sale
+);
 
 
 --QM8.2: QUERY DATA WITH ALL in front of a sub-query:
-----Description: .....................
+----Description: Provide a customer estimate for a transmission repair by identifying the service instance with the highest cost for that service type in order to send an accurate customer email
+
+SELECT service_id, service_type, cost
+FROM service
+WHERE service_type = 'Transmission Repair'
+	AND cost >= ALL (
+		SELECT cost
+		FROM service
+		WHERE service_type = 'Transmission Repair'
+		AND cost IS NOT NULL
+);
+
 
 
